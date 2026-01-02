@@ -1,0 +1,3 @@
+* Wrap in class
+* How does chunking play a role in determining diskspeed?
+* Allow for passing a specific path - or perhaps selecting a usb drive
