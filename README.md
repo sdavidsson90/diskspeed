@@ -1,3 +1,5 @@
-Just for fun. A small exercise that went a little to far. 
+This is a tool for measuring read/write speed of a specified drive.
 
-Call `diskspeed <path>`
+Besides providing interesting data, this is also a chance to overengineer a very small use case.
+
+`python3 diskspeed.py` ... or use the `--help` flag.
