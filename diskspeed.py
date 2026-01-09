@@ -66,7 +66,6 @@ class DiskSpeed:
             mbps_measurements = []
             print("Write speed:")
             with open(tmp_file, "wb") as f:
-                time_start = time.perf_counter()
                 for i in range(self.iterations):
                     progress_pct = (i / self.iterations) * 100
                     time_lap_start = time.perf_counter()
@@ -95,8 +94,7 @@ class DiskSpeed:
             mbps_min = min(mbps_measurements)
             mbps_max = max(mbps_measurements)
 
-
-            print("", end="\r", flush=True)
+            print("", end="\r")
             print(f"  mean: {gbps_mean:.3f} gb/s ({mbps_mean:.0f} mb/s)")
             print(f"  min: {gbps_min:.3f} gb/s ({mbps_min:.0f} mb/s)")
             print(f"  max: {gbps_max:.3f} gb/s ({mbps_max:.0f} mb/s)")
@@ -115,8 +113,6 @@ class DiskSpeed:
             mbps_measurements = []
             print("Read speed:")
             with open(tmp_file, "rb") as f:
-                time_start = time.perf_counter()
-                # for i in range(self.iterations):
                 for i in range(self.iterations):
                     progress_pct = (i / self.iterations) * 100
                     time_lap_start = time.perf_counter()
