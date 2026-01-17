@@ -54,7 +54,7 @@ class DiskSpeed:
 
 
         print(f"Test parameters:")
-        print(f"  Mount point: {self.which_disk}")
+        print(f"  Target disk: {self.which_disk}")
         print(f"  Block_size: {self.block_size}")
         print(f"  Iterations: {self.iterations}")
         print()
@@ -95,9 +95,9 @@ class DiskSpeed:
             mbps_max = max(mbps_measurements)
 
             print("", end="\r")
-            print(f"  mean: {gbps_mean:.3f} gb/s ({mbps_mean:.0f} mb/s)")
-            print(f"  min: {gbps_min:.3f} gb/s ({mbps_min:.0f} mb/s)")
-            print(f"  max: {gbps_max:.3f} gb/s ({mbps_max:.0f} mb/s)")
+            print(f"  · Mean: {gbps_mean:.3f} gb/s ({mbps_mean:.0f} mb/s)")
+            print(f"  · Min: {gbps_min:.3f} gb/s ({mbps_min:.0f} mb/s)")
+            print(f"  · Max: {gbps_max:.3f} gb/s ({mbps_max:.0f} mb/s)")
             try:
                 gbps_stdev = statistics.stdev(gbps_measurements)
                 mbps_stdev = statistics.stdev(mbps_measurements)
@@ -137,9 +137,9 @@ class DiskSpeed:
             mbps_max = max(mbps_measurements)
 
             print("\r", end="", flush=True)
-            print(f"  mean: {gbps_mean:.3f} gb/s ({mbps_mean:.0f} mb/s)")
-            print(f"  min: {gbps_min:.3f} gb/s ({mbps_min:.0f} mb/s)")
-            print(f"  max: {gbps_max:.3f} gb/s ({mbps_max:.0f} mb/s)")
+            print(f"  · Mean: {gbps_mean:.3f} gb/s ({mbps_mean:.0f} mb/s)")
+            print(f"  · Min: {gbps_min:.3f} gb/s ({mbps_min:.0f} mb/s)")
+            print(f"  · Max: {gbps_max:.3f} gb/s ({mbps_max:.0f} mb/s)")
             try:
                 gbps_stdev = statistics.stdev(gbps_measurements)
                 mbps_stdev = statistics.stdev(mbps_measurements)
